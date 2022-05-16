@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    background-color: #11b18e;
+    /* background-color: #500A5E; */
+}
+
+#parent-squares {
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.square {
+    border: 4px solid white;
+    width: 17vh;
+    height: 17vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3) {
+    border-top: none;
+}
+
+.square:nth-child(1),
+.square:nth-child(4),
+.square:nth-child(7) {
+    border-left: none;
+}
+
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9) {
+    border-bottom: none;
+}
+
+.square:nth-child(3),
+.square:nth-child(6),
+.square:nth-child(9) {
+    border-right: none;
+}
+
+/* X */
+.square.x::before,
+.square.x::after,
+.turnX .square:not(.x):not(.o):hover::before,
+.turnX .square:not(.x):not(.o):hover::after{
+content: "";
+    background-color: white;
+    width: 12vh;
+    height: 2vh;
+    position: absolute;
+}
+
+.square.x::before,
+.turnX .square:not(.x):not(.o):hover::before{
+    transform: rotate(45deg);
+}
+
+.square.x::after,
+.turnX .square:not(.x):not(.o):hover::after{
+transform: rotate(-45deg);
+}
+
+.turnX .square:not(.x):not(.o):hover:before,
+.turnX .square:not(.x):not(.o):hover:after{
+    background-color: rgba(230, 230, 230, 0.700);
+}
+
+/* bola */
+.square.o::after,
+.square.o::before,
+.turnO .square:not(.x):not(.o):hover::before,
+.turnO .square:not(.x):not(.o):hover::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.square.o::before,
+.turnO .square:not(.x):not(.o)::before{
+    background-color: white;
+    height: 12vh;
+    width: 12vh;
+}
+.square.o:after,
+.turnO .square:not(.x):not(.o):hover::after{
+    background-color: #11b18e;
+    height: 8vh;
+    width: 8vh;
+} 
+
+
+.turnO .square:not(.x):not(.o):hover:before{
+    background-color: rgba(230, 230, 230, 0.7);
+}
+/* Menssagem de Vitória */
+#win-message {
+     transform: translateY(-100vh); 
+     display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.750);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+#win-message.win {
+    transform: translateY(0);
+    
+}
+
+#win-message p {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+#win-message button {
+    font-size: 25px;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #20967c;
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.24);
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#win-message button:hover {
+    /* color: #11b18e;
+    background-color: white; */
+    transform:scale(1.2);
+    transition-duration:200ms;
+}
