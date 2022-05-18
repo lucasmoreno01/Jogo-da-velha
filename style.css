@@ -91,7 +91,7 @@ transform: rotate(-45deg);
 }
 
 .square.o::before,
-.turnO .square:not(.x):not(.o)::before{
+.turnO .square:not(.x):not(.o):hover::before{
     background-color: white;
     height: 12vh;
     width: 12vh;
@@ -109,8 +109,9 @@ transform: rotate(-45deg);
 }
 /* Menssagem de Vitória */
 #win-message {
-     transform: translateY(-100vh); 
-     display: flex;
+     /* transform: translateY(-100vh);  */
+     display: none;
+     /* display: flex; */
     flex-direction: column;
     top: 0;
     bottom: 0;
@@ -123,8 +124,8 @@ transform: rotate(-45deg);
 }
 
 #win-message.win {
-    transform: translateY(0);
-    
+    /* transform: translateY(0); */
+    display: flex;    
 }
 
 #win-message p {
@@ -137,8 +138,9 @@ transform: rotate(-45deg);
     padding: 5px;
     color: #ffffff;
     background-color: #20967c;
-    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.24);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.267);
     border: 1px solid black;
+    border-radius: 5px;
     cursor: pointer;
 }
 
