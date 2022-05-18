@@ -45,6 +45,7 @@ for (const square of squares) {
 	
 
 	function addXorCircle() {
+		
 		if (parentSquares.className === "turnX" && square.classList.length < 2) {
 			square.classList.add("x")
 			parentSquares.classList.remove("turnX")
