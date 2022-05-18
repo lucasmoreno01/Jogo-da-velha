@@ -35,13 +35,6 @@ function checkFinalGame() {
 	}
 }
 
-
-// Dark mode*
-// Dados da Vitória (win/rate x: 51%, O: 49% )
-// Bot que joga no solo(advanced)
-
-
-
 for (const square of squares) {
 
 
