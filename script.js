@@ -62,7 +62,7 @@ for (const square of squares) {
 			winText.innerHTML += ` X<br> Venceu!`
 		} else if (victory("o")) {
 			winMessage.classList.add("win")
-			winText.innerHTML += ` O<br> Venceu!`
+			winText.innerHTML += ` O<br> Venceu!`  
 		} else {
 			checkFinalGame()
 		}
