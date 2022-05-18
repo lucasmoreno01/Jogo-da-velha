@@ -24,33 +24,34 @@ function victory(xOrcircle) {
 };
 
 
-// // Finaliza o jogo caso todos os elementos estejam preenchidos
-// function checkFinalGame() {
-// 	const arrayFromSquares = Array.from(squares)
-// 	const finalGame = arrayFromSquares.every((sqr) => sqr.classList.contains("o") || sqr.classList.contains("x"))
-// 	// console.log(finalGame)
+//  Finaliza o jogo caso todos os elementos estejam preenchidos
+function checkFinalGame() {
+	const arrayFromSquares = Array.from(squares)
+	const finalGame = arrayFromSquares.every((sqr) => sqr.classList.contains("o") || sqr.classList.contains("x"))
 
-// 	if (finalGame === true) {
-// 		alert("fim de jogo") // adicionar a tela de empate*
-// 	}
-// }
+	if (finalGame && (!victory("x") || victory("o"))) {
+		winMessage.classList.add("win")
+		winText.innerHTML += `Empate!`
+	}
+}
 
 
-// adicionar um intervalo do fim do game até a tela aparecer
 // Dark mode*
+// Dados da Vitória (win/rate x: 51%, O: 49% )
+// Bot que joga no solo(advanced)
 
 
 
 for (const square of squares) {
-	
+
 
 	function addXorCircle() {
-		
+
 		if (parentSquares.className === "turnX" && square.classList.length < 2) {
 			square.classList.add("x")
 			parentSquares.classList.remove("turnX")
 			parentSquares.classList.add("turnO")
-		} else if (parentSquares.className === "turnO" && square.classList.length < 2 ) {
+		} else if (parentSquares.className === "turnO" && square.classList.length < 2) {
 			square.classList.add("o")
 			parentSquares.classList.remove("turnO")
 			parentSquares.classList.add("turnX")
@@ -62,8 +63,9 @@ for (const square of squares) {
 		} else if (victory("o")) {
 			winMessage.classList.add("win")
 			winText.innerHTML += ` O<br> Venceu!`
+		} else {
+			checkFinalGame()
 		}
-		console.log(victory("x"))
 
 		// checkFinalGame()
 	}
@@ -71,6 +73,7 @@ for (const square of squares) {
 	square.addEventListener("click", addXorCircle)
 
 }
+
 // reiniciar  jogo
 const refreshBtn = winMessage.querySelector("button").
 	addEventListener("click", () => location.reload())
