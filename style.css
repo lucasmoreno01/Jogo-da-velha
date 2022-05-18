@@ -6,7 +6,6 @@ body {
     color: white;
     text-align: center;
     background-color: #11b18e;
-    /* background-color: #500A5E; */
 }
 
 #parent-squares {
@@ -109,9 +108,7 @@ transform: rotate(-45deg);
 }
 /* Menssagem de Vitória */
 #win-message {
-     /* transform: translateY(-100vh);  */
      display: none;
-     /* display: flex; */
     flex-direction: column;
     top: 0;
     bottom: 0;
@@ -124,7 +121,6 @@ transform: rotate(-45deg);
 }
 
 #win-message.win {
-    /* transform: translateY(0); */
     display: flex;    
 }
 
@@ -145,8 +141,6 @@ transform: rotate(-45deg);
 }
 
 #win-message button:hover {
-    /* color: #11b18e;
-    background-color: white; */
     transform:scale(1.2);
     transition-duration:200ms;
 }
