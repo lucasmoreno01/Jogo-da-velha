@@ -8,6 +8,8 @@ body {
     background-color: #11b18e;
 }
 
+
+
 #parent-squares {
     height: 70vh;
     display: grid;
@@ -55,8 +57,8 @@ body {
 .square.x::before,
 .square.x::after,
 .turnX .square:not(.x):not(.o):hover::before,
-.turnX .square:not(.x):not(.o):hover::after{
-content: "";
+.turnX .square:not(.x):not(.o):hover::after {
+    content: "";
     background-color: white;
     width: 12vh;
     height: 2vh;
@@ -64,17 +66,17 @@ content: "";
 }
 
 .square.x::before,
-.turnX .square:not(.x):not(.o):hover::before{
+.turnX .square:not(.x):not(.o):hover::before {
     transform: rotate(45deg);
 }
 
 .square.x::after,
-.turnX .square:not(.x):not(.o):hover::after{
-transform: rotate(-45deg);
+.turnX .square:not(.x):not(.o):hover::after {
+    transform: rotate(-45deg);
 }
 
 .turnX .square:not(.x):not(.o):hover:before,
-.turnX .square:not(.x):not(.o):hover:after{
+.turnX .square:not(.x):not(.o):hover:after {
     background-color: rgba(230, 230, 230, 0.700);
 }
 
@@ -82,7 +84,7 @@ transform: rotate(-45deg);
 .square.o::after,
 .square.o::before,
 .turnO .square:not(.x):not(.o):hover::before,
-.turnO .square:not(.x):not(.o):hover::after{
+.turnO .square:not(.x):not(.o):hover::after {
     content: "";
     background-color: white;
     position: absolute;
@@ -90,43 +92,45 @@ transform: rotate(-45deg);
 }
 
 .square.o::before,
-.turnO .square:not(.x):not(.o):hover::before{
+.turnO .square:not(.x):not(.o):hover::before {
     background-color: white;
     height: 12vh;
     width: 12vh;
 }
+
 .square.o:after,
-.turnO .square:not(.x):not(.o):hover::after{
+.turnO .square:not(.x):not(.o):hover::after {
     background-color: #11b18e;
     height: 8vh;
     width: 8vh;
-} 
+}
 
-
-.turnO .square:not(.x):not(.o):hover:before{
+.turnO .square:not(.x):not(.o):hover:before {
     background-color: rgba(230, 230, 230, 0.7);
 }
+
 /* Menssagem de Vitória */
 #win-message {
-     display: none;
+    display: none;
     flex-direction: column;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.750);
+    background-color: rgba(0, 0, 0, 0.842);
     position: fixed;
     justify-content: center;
     align-items: center;
 }
 
 #win-message.win {
-    display: flex;    
+    display: flex;
 }
 
 #win-message p {
     font-size: 80px;
     font-weight: bold;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.418);
 }
 
 #win-message button {
@@ -141,6 +145,12 @@ transform: rotate(-45deg);
 }
 
 #win-message button:hover {
-    transform:scale(1.2);
-    transition-duration:200ms;
+    transform: scale(1.2);
+    transition-duration: 200ms;
+}
+
+@media only screen and (orientation: landscape) {
+    body {
+        background-color: blue;
+    }
 }

@@ -3,6 +3,7 @@ const parentSquares = document.querySelector("#parent-squares")
 const winMessage = document.querySelector("#win-message")
 const winText = document.querySelector("#win-text")
 
+
 // índice das sequancias de vitórias
 const victorySequences = [
 	[0, 1, 2],
@@ -34,13 +35,6 @@ function checkFinalGame() {
 		winText.innerHTML += `Empate!`
 	}
 }
-
-
-// Dark mode*
-// Dados da Vitória (win/rate x: 51%, O: 49% )
-// Bot que joga no solo(advanced)
-
-
 
 for (const square of squares) {
 
