@@ -1,16 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
     background-color: #11b18e;
+    box-sizing: border-box;
 }
 
 
 
 #parent-squares {
+    box-sizing: border-box;
     height: 70vh;
     width: 90vw;
     margin: auto;
