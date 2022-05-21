@@ -149,8 +149,11 @@ body {
     transition-duration: 200ms;
 }
 
-@media only screen and (orientation: landscape) and (min-device-width: 480px) {
-    body {
-        background-color: blue;
+@media only screen and 
+(max-device-height:450px) and
+(orientation: landscape) {
+        body {
+            background-color: blue;
+        }
     }
-}
+    
