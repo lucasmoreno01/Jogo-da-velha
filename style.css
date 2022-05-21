@@ -13,13 +13,13 @@ body {
 #parent-squares {
     box-sizing: border-box;
     height: 70vh;
-   max-width: 90vw;
+    max-width: 90vw;
     margin: auto;
     display: grid;
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(3, auto);
-    background-color: aquamarine;
+    background-color: rgb(37, 37, 37);
 }
 
 .square {
@@ -153,11 +153,30 @@ body {
     transition-duration: 200ms;
 }
 
-@media only screen and 
-(max-device-height:450px) and
+#landscape-message {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.774);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+}
+
+#landscape-message p {
+    font-size: 7vw;
+    font-weight: bold;
+    align-self: center;
+}
+
+@media only screen and
+
+/* (max-device-height:450px) and */
 (orientation: landscape) {
-        body {
-            background-color: blue;
-        }
+    #landscape-message {
+        position: fixed;
+        display: flex;
     }
-    
+}
