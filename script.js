@@ -16,6 +16,7 @@ const victorySequences = [
 	[2, 4, 6],
 ]
 
+//checagem de vitória
 function victory(xOrcircle) {
 	return victorySequences.some((combination) => {
 		return combination.every((index) => {
@@ -38,7 +39,7 @@ function checkFinalGame() {
 
 for (const square of squares) {
 
-
+	// adicionar X ou O
 	function addXorCircle() {
 
 		if (parentSquares.className === "turnX" && square.classList.length < 2) {
@@ -51,6 +52,7 @@ for (const square of squares) {
 			parentSquares.classList.add("turnX")
 		}
 
+		// mensagem de vitória
 		if (victory("x")) {
 			winMessage.classList.add("win")
 			winText.innerHTML += ` X<br> Venceu!`
@@ -61,7 +63,6 @@ for (const square of squares) {
 			checkFinalGame()
 		}
 
-		// checkFinalGame()
 	}
 
 	square.addEventListener("click", addXorCircle)

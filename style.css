@@ -83,6 +83,10 @@ body {
     background-color: rgba(230, 230, 230, 0.700);
 }
 
+.square.x{
+    cursor: not-allowed;
+}
+
 /* bola */
 .square.o::after,
 .square.o::before,
@@ -111,6 +115,9 @@ body {
 .turnO .square:not(.x):not(.o):hover:before {
     background-color: rgba(230, 230, 230, 0.7);
 }
+.square.o {
+    cursor: not-allowed;
+}
 
 /* Menssagem de Vitória */
 #win-message {
@@ -120,7 +127,7 @@ body {
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.842);
+    background-color: rgba(0, 0, 0, 0.932);
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -139,8 +146,9 @@ body {
 #win-message button {
     font-size: 25px;
     padding: 5px;
-    color: #ffffff;
-    background-color: #20967c;
+    color: #000;
+    font-weight: bold;
+    background-color: #fff;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.267);
     border: 1px solid black;
     border-radius: 5px;
