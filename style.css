@@ -172,7 +172,7 @@ body {
 
 @media only screen and
 
-/* (max-device-height:450px) and */
+(max-device-height:450px) and
 (orientation: landscape) {
     #landscape-message {
         position: fixed;
