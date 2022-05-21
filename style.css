@@ -13,7 +13,7 @@ body {
 #parent-squares {
     box-sizing: border-box;
     height: 70vh;
-    width: 50vw;
+   max-width: 90vw;
     margin: auto;
     display: grid;
     justify-content: center;
@@ -23,8 +23,8 @@ body {
 
 .square {
     border: 4px solid white;
-    width: 17vh;
-    height: 17vh;
+    width: 16vh;
+    height: 16vh;
     display: flex;
     align-items: center;
     justify-content: center;
