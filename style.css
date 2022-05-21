@@ -12,7 +12,7 @@ body {
 
 #parent-squares {
     height: 70vh;
-    width: calc(100vh - 10px);
+    width: 90vw;
     margin: auto;
     display: grid;
     justify-content: center;
