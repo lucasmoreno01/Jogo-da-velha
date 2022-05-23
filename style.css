@@ -173,17 +173,39 @@ body {
 }
 
 #landscape-message p {
-    font-size: 7vw;
+    font-size: 5vw;
     font-weight: bold;
     align-self: center;
 }
 
-@media only screen and
+#landscape-message img{
+    width: 10vw;
+    align-self: center;
+    filter: invert();
+    transform: rotate(-0.13turn);
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-duration: ease-in-out;
+}
 
+@media only screen and
 (max-device-height:450px) and
 (orientation: landscape) {
     #landscape-message {
         position: fixed;
         display: flex;
+        flex-direction: column;
+    }
+}
+
+@keyframes rotate {
+    from{
+    transform: rotate(-0.13turn);
+    }
+
+    to{
+        transform: rotate(-0.39turn);
     }
 }
